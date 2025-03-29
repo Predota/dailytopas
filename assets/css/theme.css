@@ -1,0 +1,33 @@
+@theme {
+  --font-display: "Borel";
+}
+
+@plugin "daisyui/theme" {
+  --color-base-100: var(--color-white);
+  --color-base-200: var(--color-orange-100);
+  --color-base-300: var(--color-orange-200);
+  --color-base-content: var(--color-orange-950);
+  --color-primary: var(--color-lime-400);
+  --color-primary-content: var(--color-lime-900);
+  --color-secondary: var(--color-rose-300);
+  --color-secondary-content: var(--color-rosse-900);
+  --color-accent: var(--color-amber-400);
+  --color-accent-content: var(--color-amber-900);
+  --color-neutral: var(--color-amber-900);
+  --color-neutral-content: var(--color-white);
+
+  --radius-selector: 0.5rem;
+  --radius-field: calc(infinity * 1px);
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+
+  color-scheme: "light";
+
+  default: true;
+  name: "dailytopas";
+  prefersdark: false;
+}

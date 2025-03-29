@@ -1,0 +1,8 @@
+@import "./tailwind.css";
+@import "./theme.css";
+
+@import "./grid.css";
+
+html {
+  background: url("/images/paper.svg");
+}

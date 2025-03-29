@@ -1,0 +1,40 @@
+@utility ui-grid {
+  --bleed-size: 1.5rem;
+  --container-width: 100%;
+
+  display: grid;
+  grid-template-columns:
+    var(--bleed-size)
+    1fr
+    repeat(
+      12,
+      minmax(0, calc((var(--container-width) - var(--bleed-size) * 2) / 12))
+    )
+    1fr
+    var(--bleed-size);
+  column-gap: 0 !important;
+
+  @media (width >= 640px) {
+    --container-width: 640px;
+  }
+
+  @media (width >= 768px) {
+    --container-width: 768px;
+  }
+
+  @media (width >= 1024px) {
+    --container-width: 1024px;
+  }
+
+  @media (width >= 1280px) {
+    --container-width: 1280px;
+  }
+}
+
+@utility col-span-main {
+  grid-column: 2 / -2;
+}
+
+@utility col-span-container {
+  grid-column: 3 / -3;
+}
