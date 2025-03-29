@@ -25,9 +25,7 @@
   --depth: 1;
   --noise: 0;
 
-  color-scheme: "light";
-
   default: true;
   name: "dailytopas";
-  prefersdark: false;
+  prefersdark: true;
 }
