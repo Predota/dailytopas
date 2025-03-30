@@ -5,6 +5,9 @@ export interface TypeFeaturedProductFields {
     slug: EntryFieldTypes.Symbol;
     description?: EntryFieldTypes.RichText;
     cover?: EntryFieldTypes.AssetLink;
+    price: EntryFieldTypes.Number;
+    brand: EntryFieldTypes.Symbol;
+    url: EntryFieldTypes.Symbol;
 }
 
 export type TypeFeaturedProductSkeleton = EntrySkeletonType<TypeFeaturedProductFields, "featuredProduct">;

@@ -6,6 +6,7 @@ export interface TypeBlogPostFields {
     slug: EntryFieldTypes.Symbol;
     description?: EntryFieldTypes.RichText;
     cover?: EntryFieldTypes.AssetLink;
+    publishedAt: EntryFieldTypes.Date;
     category: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeCategorySkeleton>>;
     content: EntryFieldTypes.RichText;
 }

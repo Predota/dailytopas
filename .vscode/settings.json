@@ -4,8 +4,9 @@
     "source.fixAll.eslint": "explicit",
     "source.fixAll.stylelint": "explicit"
   },
+  "eslint.validate": [ "javascript", "javascriptreact", "vue"],
   "stylelint.validate": ["css", "vue", "postcss"],
   "css.lint.unknownAtRules": "ignore",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
 }

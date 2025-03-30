@@ -26,7 +26,8 @@
     "stylelint": "^16.17.0",
     "stylelint-config-clean-order": "^7.0.0",
     "stylelint-config-recommended-vue": "^1.6.0",
-    "stylelint-prettier": "^5.0.3"
+    "stylelint-prettier": "^5.0.3",
+    "typescript": "^5.8.2"
   },
   "dependencies": {
     "@iconify/json": "^2.2.321",

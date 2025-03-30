@@ -1,11 +1,12 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
+import type { TypeTopicSkeleton } from "./TypeTopic";
 
 export interface TypeCategoryFields {
     title: EntryFieldTypes.Symbol;
     slug: EntryFieldTypes.Symbol;
     description?: EntryFieldTypes.RichText;
     cover?: EntryFieldTypes.AssetLink;
-    topic: EntryFieldTypes.Symbol<"Blog Post" | "Featured Product" | "Product">;
+    topic: EntryFieldTypes.EntryLink<TypeTopicSkeleton>;
 }
 
 export type TypeCategorySkeleton = EntrySkeletonType<TypeCategoryFields, "category">;
