@@ -2,14 +2,15 @@
 import jsonStringifySafe from "json-stringify-safe";
 
 import { contentfulClient } from "@/server/utils/contentful";
-import type { TypeArchiveSkeleton } from "@/types/contentful";
+import type { TypeTemplateSkeleton } from "@/types/contentful";
 
 export default defineEventHandler(async (event) => {
-  const slug = getRouterParam(event, "slug");
+  const topic = getRouterParam(event, "topic");
 
-  const data = await contentfulClient.getEntries<TypeArchiveSkeleton>({
-    content_type: "archive",
-    "fields.slug": slug,
+  const data = await contentfulClient.getEntries<TypeTemplateSkeleton>({
+    content_type: "template",
+    "fields.topic.sys.contentType.sys.id": "topic",
+    "fields.topic.fields.id": topic,
     include: 10,
   });
 

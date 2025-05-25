@@ -2,6 +2,7 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 
 export interface TypeTopicFields {
     title: EntryFieldTypes.Symbol;
+    slug: EntryFieldTypes.Symbol;
     id: EntryFieldTypes.Symbol;
     description?: EntryFieldTypes.RichText;
     cover?: EntryFieldTypes.AssetLink;

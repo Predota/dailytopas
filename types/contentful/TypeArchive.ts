@@ -5,6 +5,7 @@ export interface TypeArchiveFields {
     title: EntryFieldTypes.Symbol;
     slug: EntryFieldTypes.Symbol;
     topic: EntryFieldTypes.EntryLink<TypeTopicSkeleton>;
+    limit: EntryFieldTypes.Integer;
 }
 
 export type TypeArchiveSkeleton = EntrySkeletonType<TypeArchiveFields, "archive">;
