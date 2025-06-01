@@ -47,7 +47,11 @@ export default defineNuxtModule({
               name: `${topic.fields.id}-${page}`,
               path: `/${topic.fields.slug}/${page}`,
               file: resolve("runtime/archive.vue"),
-              meta: { topic: topic.fields.id, page: page },
+              meta: {
+                topic: topic.fields.id,
+                page: page,
+                limit: archive.fields.limit,
+              },
             });
           }
 
@@ -82,9 +86,13 @@ export default defineNuxtModule({
             for (let page = 1; page <= categoryPageNb; page++) {
               pages.push({
                 name: `${category.fields.slug}-${page}`,
-                path: `/${category.fields.slug}/${page}`,
+                path: `/${topic.fields.slug}/${category.fields.slug}/${page}`,
                 file: resolve("runtime/archive.vue"),
-                meta: { topic: topic.fields.id, page: page },
+                meta: {
+                  topic: topic.fields.id,
+                  page: page,
+                  limit: archive.fields.limit,
+                },
               });
             }
 
