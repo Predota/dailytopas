@@ -8,12 +8,14 @@ const props = withDefaults(
     maxWidth?: Breakpoint;
     breakpoint?: Breakpoint;
     reversedOnBreaking?: boolean;
+    leftFullWidth?: boolean;
+    rightFullWidth?: boolean;
   }>(),
   {
     padding: "1.5rem",
     gap: "2rem",
     maxWidth: "xl",
-    breakpoint: "md",
+    breakpoint: "lg",
     reversedOnBreaking: true,
   },
 );
@@ -33,7 +35,11 @@ const computedMaxWidth = computed(() => widthMap[props.maxWidth] ?? "100%");
     :class="[
       'section',
       `breakpoint-${breakpoint}`,
-      { 'reversed-on-breaking': reversedOnBreaking },
+      {
+        'reversed-on-breaking': reversedOnBreaking,
+        'left-full-width': leftFullWidth,
+        'right-full-width': rightFullWidth,
+      },
     ]"
   >
     <slot />
@@ -117,6 +123,14 @@ const computedMaxWidth = computed(() => widthMap[props.maxWidth] ?? "100%");
   .section-right {
     order: 2;
   }
+}
+
+.left-full-width .section-left {
+  grid-column-start: 1 !important;
+}
+
+.right-full-width .section-right {
+  grid-column-end: -1 !important;
 }
 
 @media (width >= 40rem) {
